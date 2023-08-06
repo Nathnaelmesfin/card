@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Change Card Content</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+    <section>
+        <div class="container mt-5">
+            <div class="card">
+              <img class="card-img-top" src="./360_F_531710260_ByieqNe7Ut6QBHgIR7xgdsxH7gICrHr1.jpg">
+                <div class="overlay">
+                    <div class="card-body" style="text-align:center; position:relative;">
+                        <h5 class="card-title">Card Title</h5>
+                        <p class="card-text" id="card-text">This is the initial content of the card.</p>
+                        <button class="btn btn-primary mt-5 " id="change-content-btn">Change Content</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <div class="container mt-5" style="display: none;" id="new-card-container">
+            <div class="card">
+              <img class="card-img-top" src="./1_UaWlv0h7I3kvWtlDqFB7Dg.png">                    
+                <div class="overlay">
+                <div class="card-body" style="text-align:center; position:relative;">
+                   <h5 class="card-title">Under construction</h5>
+                   <p class="card-text">This is the new content of the card.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+<script>
+
+var changeContentBtn = document.getElementById("change-content-btn");
+var cardContainer = document.querySelector(".container");
+var newCardContainer = document.getElementById("new-card-container");
+
+
+changeContentBtn.addEventListener("click", function() {
+
+cardContainer.style.display = "none";
+
+newCardContainer.style.display = "block";
+});
+</script>
+
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
